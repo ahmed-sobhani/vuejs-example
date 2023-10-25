@@ -1,0 +1,184 @@
+@mixin flex-config(
+  $justify-content: false,
+  $flex: false,
+  $flex-direction: false,
+  $align-items: false
+) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    @if $flex-direction == row-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: horizontal;
+      -moz-box-direction: reverse;
+      -moz-box-orient: horizontal;
+    } @else if $flex-direction == column {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -moz-box-direction: normal;
+      -moz-box-orient: vertical;
+    } @else if $flex-direction == column-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+      -moz-box-direction: reverse;
+      -moz-box-orient: vertical;
+    } @else {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-direction: normal;
+      -moz-box-orient: horizontal;
+    }
+    -webkit-flex-direction: $flex-direction;
+    -ms-flex-direction: $flex-direction;
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    @if $align-items == flex-start {
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+    } @else if $align-items == flex-end {
+      -webkit-box-align: end;
+      -moz-box-align: end;
+      -ms-flex-align: end;
+    } @else {
+      -webkit-box-align: $align-items;
+      -moz-box-align: $align-items;
+      -ms-flex-align: $align-items;
+    }
+    -webkit-align-items: $align-items;
+    align-items: $align-items;
+  }
+}
+
+@mixin for-size($size) {
+  @if $size == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $size == nomob {
+    @media (min-width: 578px) {
+      @content;
+    }
+  }
+   @else if $size == mid {
+    @media (min-width: 577px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $size == xsm {
+    @media (max-width: 577px) {
+      @content;
+    }
+  }
+}
+////////////////////////////////////////////
+//
+///////////////////////////////////////////
+@mixin infinity(
+  $size,
+  $b-before,
+  $angl-befor-left,
+  $angl-befor-btn,
+  $angl-after-rtl,
+  $angl-after-top: 50%
+) {
+  width: $size;
+  height: $size;
+  &:before {
+    border-width: $b-before;
+  }
+  &:after {
+    top: -$b-before;
+    left: -$b-before;
+    right: -$b-before;
+    bottom: -$b-before;
+  }
+  .triangel {
+    &:before {
+      left: $angl-befor-left;
+      bottom: $angl-befor-btn;
+    }
+    &:after {
+      right: $angl-after-rtl;
+      top: $angl-after-top;
+    }
+  }
+}
+@mixin carouse-li($btn, $li-color: #fff) {
+  bottom: $btn;
+  li {
+    background-color: $li-color;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 0;
+  }
+}
+@mixin padding($top, $btn: $top) {
+  padding-bottom: $btn;
+  padding-top: $top;
+}
+@mixin margin($top, $btn: $top) {
+  margin-bottom: $btn;
+  margin-top: $top;
+}
+//////////////////////////////////////////
+@mixin btn($child-abi, $child-sefid, $brdcolor:rgba(255, 255, 255, 0.5), $colr:$white) {
+  a {
+    @content;
+  }
+  a:#{$child-abi} {
+    background-color: $blue;
+    color: $white;
+    padding: 10px 30px;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+  a:#{$child-sefid}  {
+    padding: 8px 30px;
+    width: fit-content;
+    border: 1px solid $brdcolor;
+    display: inline-block;
+    color: $colr;
+    margin-top: 1rem;
+  }
+}
+@mixin progres($width) {
+      li.active::after {
+        @if $width == lvl1 {
+          width: 22%;
+        } @else if $width == lvl2 {
+          width: calc(50% - 10px);
+        } @else if $width == lvl3 {
+          width: calc(75% - 20px);
+        } @else if $width == lvl4 {
+          width: 100%;
+        }    
+        
+       @else if $width == lvl1se {
+        width: 33%;
+      } 
+     @else if $width == lvl2se {
+      width: 66%;
+    }     
+    }
+
+}

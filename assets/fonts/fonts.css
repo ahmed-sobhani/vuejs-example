@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'GilroyBold';
+  src: url('Gilroy-Bold.eot');
+  src: url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+      url('Gilroy-Bold.woff2') format('woff2'),
+      url('Gilroy-Bold.woff') format('woff'),
+      url('Gilroy-Bold.ttf') format('truetype'),
+      url('Gilroy-Bold.svg#Gilroy-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeldaDidoneNorm';
+  src: url('BeldaDidone-NorBol.eot');
+  src: url('BeldaDidone-NorBol.eot?#iefix') format('embedded-opentype'),
+      url('BeldaDidone-NorBol.woff2') format('woff2'),
+      url('BeldaDidone-NorBol.woff') format('woff'),
+      url('BeldaDidone-NorBol.ttf') format('truetype'),
+      url('BeldaDidone-NorBol.svg#BeldaDidone-NorBol') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy-Light.eot');
+    src: url('Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('Gilroy-Light.woff2') format('woff2'),
+        url('Gilroy-Light.woff') format('woff'),
+        url('Gilroy-Light.ttf') format('truetype'),
+        url('Gilroy-Light.svg#Gilroy-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

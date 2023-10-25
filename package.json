@@ -1,0 +1,33 @@
+{
+  "name": "test-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "apexcharts": "^3.23.1",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.2",
+    "cookie-universal-nuxt": "^2.1.4",
+    "core-js": "^3.6.5",
+    "moment": "^2.29.1",
+    "nuxt": "^2.14.6",
+    "vee-validate": "^2.2.15",
+    "vue-apexcharts": "^1.6.0",
+    "vue-axios": "^3.0.1",
+    "vue-progressbar": "^0.7.5",
+    "vue-snotify": "^3.2.1",
+    "vue-tel-input": "^5.0.2",
+    "vue-typer": "^1.2.0",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0"
+  }
+}
